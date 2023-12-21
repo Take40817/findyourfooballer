@@ -2,7 +2,6 @@ import os
 from flask import Flask, request, render_template
 from model import predict
 from process import recog_img
-import os
 
 PREPROCESS_FOLDER = "./static/preprocess_image"
 PROCESSED_FOLDER = "./static/processed_image"
