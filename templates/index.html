@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<main>
+    <div class="rule-content">
+        <div class="link-content">
+            <p>
+                サッカーの試合中、「この選手ってどんな選手なんだろう？」や「観戦に飽きてしまった、、」<br>
+                そんな経験ありませんか？<br>
+                <br>
+                そんな経験がない方にもある方にも、もっとサッカー観戦を楽しめるアプリを紹介します！！<br>
+                このアプリさえあれば、試合中の疑問やプレーが止まっている時間の暇つぶしができちゃいます！！<br>
+                <br>
+                使い方は簡単！写真を撮ってアップロードするだけ！<br>
+                試合中の写真やネットで検索した選手の顔写真からすぐにせわしい選手情報が見れます<br>
+                それだけでなく、その選手のスーパープレイやちょっとした面白情報まで網羅してます！！<br>
+                <br>
+                サッカーのルールを知りたい方は<a href="/rule">こちら</a>から！
+            </p>
+        </div>
+    </div>
+
+    <h1 class="content_title">さっそくサッカー選手の写真を入力！</h1>
+    <div class="content">
+        <form action = "/upload" method="post" enctype="multipart/form-data">
+            <p><input type="file" id = "upload_file" name = "upload_file" multiple="multiple" class="form_control"></p>
+            <div class="upload_btn">
+                <input type="submit" value="送信">
+            </div>
+        </form>
+    </div>
+
+    <div class="attention">
+        <div class="a-title">写真の認識が上手くいかない方へ</div>
+        <p>
+            テレビに映っている選手を撮影した時などに選手の顔を上手く認識できない場合があります。そんな場合は以下の方法によって写真の補正を行うと認識精度が上がります！
+        </p>
+        <div class="ex-content">
+            <div class="ex-flex">
+                <p><strong>補正前</strong></p>
+                <div class="ex-img"><img src="../static/background_image/b-correction.png"></div>
+            </div>
+            <div class="ex-flex">
+                <p><strong>補正後</strong></p>
+                <div class="ex-img"><img src="../static/background_image/a-correction.png"></div>
+            </div>
+        </div>
+        <p>
+            このようにiPhoneの場合、写真を開くと右上に「編集」ボタンがあり、ここをタップして「魔法の杖マーク」をタップすると自動で写真の補正を行ってくれます。見た目ではわかりずらいですが、この操作により顔の輪郭が強調されるため、顔の認識精度を上げることができます。<br>
+            <br>
+            Androidの場合は機種によって操作方法が異なりますが、顔の認識精度が悪いと感じたら、写真の自動補正を行ってみましょう。
+        </p>
+    </div>
+</main>
+
+{% endblock %}
